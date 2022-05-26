@@ -1,3 +1,6 @@
 
 def stringcalculater(param):
-    return 0
+    if param == "":
+        return 0
+    return 1
+  
