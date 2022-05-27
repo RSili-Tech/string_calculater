@@ -1,6 +1,6 @@
 
-def stringcalculater(param):
+def Add(param):
     if param == "":
         return 0
-    return 1
+    return param
   
