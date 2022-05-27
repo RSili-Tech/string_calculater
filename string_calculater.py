@@ -8,7 +8,7 @@ def Add(param):
     #check for comma seperate numbers in string
     else:
         sum = add_string_numbers(param)
-        if sum >0 :
+        if sum > 0 :
             return sum
         else :
             return 'Unable to calculate'
@@ -21,7 +21,7 @@ def add_string_numbers(string):
     space_seperated_numbers     = check_space_seperated_numbers(string)
     newline_seperated_numbers   = check_newline_seperated_numbers(string)
 
-    if(comma_seperated_numbers):
+    if comma_seperated_numbers :
         numbers = comma_seperated_numbers
 
     elif space_seperated_numbers:
@@ -30,38 +30,38 @@ def add_string_numbers(string):
     elif newline_seperated_numbers:
         numbers = space_seperated_numbers
 
-    if len(numbers) > 0 :
+    if len(numbers) > 1 :
         validate_numbers_for_negative_value(numbers)
         return sum(numbers)
     else :
-        return 0
+        return string
 
 
 
 def check_comma_seperated_numbers(string):
     numbers         = string.split(',')
     number_count    = len(numbers)
-    if(number_count>1):
-        return numbers
+    if number_count > 1 :
+        return numbers   
     else :
-        return FALSE
+        return False
 
 
 def check_space_seperated_numbers(string):
     numbers         = string.split(' ')
     number_count    = len(numbers)
-    if(number_count>1):
-        return numbers
+    if number_count > 0 :
+        return numbers    
     else :
-        return FALSE
+        return False
 
 def check_newline_seperated_numbers(string):
     numbers         = string.split('\n')
     number_count    = len(numbers)
-    if(number_count>1):
-        return numbers
+    if number_count > 0 :
+        return numbers    
     else :
-        return FALSE
+        return False
 
 def validate_numbers_for_negative_value(numbers):
     if any(number < 0 for number in numbers):
