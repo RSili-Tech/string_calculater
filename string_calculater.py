@@ -14,7 +14,7 @@ def add_string_numbers(string):
     numbers                     = []
     numbers   = check_newline_and_comma_seperated_numbers(string)   
     if len(numbers) > 1 :
-        check_negative_numbers(numbers) 
+      
         int_array = [int(numeric_string) for numeric_string in numbers]
         validate_numbers_for_negative_value(int_array)   
             
@@ -35,9 +35,3 @@ def check_newline_and_comma_seperated_numbers(string):
 def validate_numbers_for_negative_value(numbers):
     if any( int(number) < 0 for number in numbers):
         raise ValueError
-
-def check_negative_numbers(numbers):
-    negative_numbers = filter(lambda x: x < 0, numbers)
-    print(negative_numbers)
-    if negative_numbers : 
-        raise Exception('negatives not allowed ')
