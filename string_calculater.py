@@ -15,15 +15,21 @@ def Add(param):
     return param
   
 def add_string_numbers(string):
-    numbers                 = []
-    comma_seperated_numbers = check_comma_seperated_numbers(string)
-    space_seperated_numbers = check_space_seperated_numbers(string)
+    numbers                     = []
+    comma_seperated_numbers     = check_comma_seperated_numbers(string)
+    space_seperated_numbers     = check_space_seperated_numbers(string)
+    newline_seperated_numbers   = check_newline_seperated_numbers(string)
 
     if(comma_seperated_numbers):
         numbers = comma_seperated_numbers
 
     elif space_seperated_numbers:
         numbers = space_seperated_numbers
+    
+    elif space_seperated_numbers:
+        numbers = space_seperated_numbers
+    
+
 
 def check_comma_seperated_numbers(string):
     numbers         = string.split(',')
