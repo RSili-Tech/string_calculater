@@ -23,7 +23,12 @@ def test_stringcalculater_should_return_the_same_number_if_input_is_one_number_o
     result = Add(input)
     assert result == input
 
-def test_stringcalculater_for_unknowwn_amount_of_number():
+def test_stringcalculater_to_add_for_unknowwn_amount_of_number():
     input = '1,2,3'
+    result = Add(input)
+    assert result 
+
+def test_stringcalculater_to_add_for_newlines_between_number():
+    input = "1\n2,3"
     result = Add(input)
     assert result 
