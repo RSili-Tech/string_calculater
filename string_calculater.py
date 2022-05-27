@@ -26,9 +26,15 @@ def add_string_numbers(string):
     elif space_seperated_numbers:
         numbers = space_seperated_numbers
     
-    elif space_seperated_numbers:
+    elif newline_seperated_numbers:
         numbers = space_seperated_numbers
-    
+
+    if len(numbers) > 0 :
+        validate_numbers_for_negative_value(numbers)
+        return sum(numbers)
+    else :
+        return 0
+
 
 
 def check_comma_seperated_numbers(string):
