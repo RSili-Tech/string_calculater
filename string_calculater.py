@@ -15,8 +15,15 @@ def Add(param):
     return param
   
 def add_string_numbers(string):
-    if(check_comma_seperated_numbers):
-        pass
+    numbers                 = []
+    comma_seperated_numbers = check_comma_seperated_numbers(string)
+    space_seperated_numbers = check_space_seperated_numbers(string)
+
+    if(comma_seperated_numbers):
+        numbers = comma_seperated_numbers
+
+    elif space_seperated_numbers:
+        numbers = space_seperated_numbers
 
 def check_comma_seperated_numbers(string):
     numbers         = string.split(',')
@@ -42,3 +49,7 @@ def check_newline_seperated_numbers(string):
         return numbers
     else :
         return FALSE
+
+def validate_numbers_for_negative_value(numbers):
+    if any(number < 0 for number in numbers):
+        raise ValueError
