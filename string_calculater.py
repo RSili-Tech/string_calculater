@@ -4,15 +4,16 @@ from pickle import FALSE
 
 
 def Add(param):
-    if param == "":
-        return 0
+    if param == "": return 0
     #check for comma seperate numbers in string
     else:
-       
-        number = param.split(' ')
-        
+        sum = add_string_numbers(param)
+        if sum >0 :
+            return sum
+        else :
+            return 'Unable to calculate'
 
-    return param
+    
   
 def add_string_numbers(string):
     numbers                     = []
