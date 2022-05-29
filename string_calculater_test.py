@@ -34,6 +34,7 @@ def test_stringcalculater_to_add_for_newlines_between_number():
     assert result 
 
 def test_stringcalculater_to_show_negative_numbers_not_allowed():    
-    input = '-1, -2, -3, 1, 2, 3'   
+    input = '-11, -2, -14, 1, 5, 3'   
     assert pytest.raises(ValueError, Add, input)
-  
+
+test_stringcalculater_to_show_negative_numbers_not_allowed()
