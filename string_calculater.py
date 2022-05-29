@@ -23,34 +23,17 @@ def add_string_numbers(string):
     #     return string
 
 def check_newline_and_comma_seperated_numbers(string):
-   
-    test_str = "gfg + 4-1i,s + 5best-18 1\n2,3"
-    res = re.findall('[-+]?\d+', test_str)
-  
-    print("The split string is : " + str(res)) 
-    # numbers         = []
-    # char_position   = False
-   
-    # for index, chr in enumerate(string, start=0): 
-    #     next_position  = index+1
-    #     next_char      = string[next_position]
-    #     # if index > 0 :
-    #     #     prev_position  = int(index-1)
-    #     #     prev_char      = string[prev_position]
-    #     # else :
-    #     #     prev_position  = 0
-    #     #     prev_char      = ''
+    
+    numbers         = []    
+    string_array    = refecter_string(string)
+    print(string_array)
+    for number in string_array : 
+        if number.isnumeric():
+            numbers.append(chr)
+        elif number.isdigit(): 
+            validate_numbers_for_negative_value(number)
 
-        
-     
-    #     if chr == '-' and  next_char.isdigit():  
-    #         print("next Position " + str(index ) + ' value: '+ next_char )
-    #        # print ('Negative')
-    # #        # validate_numbers_for_negative_value(next_char)
-    # #        print ('negative ')
-    # #     elif chr.isdigit() and prev_char != '-':                                      
-    # #             numbers.append(chr)
-            
+    print(numbers)
     # # print(numbers)
     # # number_count    = len(numbers)
     # # if number_count > 0 :
@@ -58,7 +41,11 @@ def check_newline_and_comma_seperated_numbers(string):
     # # else :
     # #     return False
 
-def validate_numbers_for_negative_value(number):
-    number = -number
+def validate_numbers_for_negative_value(number):    
     if int(number) < 0 :
         raise ValueError
+        
+def refecter_string(string):
+    
+    res = re.findall('[-+]?\d+', string)
+    return res
